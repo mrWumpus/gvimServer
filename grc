@@ -1,4 +1,12 @@
 #!/bin/sh
 
+SOURCE=$BASH_SOURCE
+
+if [ "${SOURCE:0:1}" != "/" ]; then
+  SOURCE=$PWD/$SOURCE
+fi
+
+export PATH=$PATH:`dirname $SOURCE`
+
 alias gset='. g-set'
 alias g='gvimServer'

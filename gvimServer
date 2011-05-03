@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 while getopts "s:" flag; do
   if [ "$flag" = "s" ]; then

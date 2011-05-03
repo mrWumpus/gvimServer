@@ -1,0 +1,15 @@
+#!/bin/sh
+
+if [ $# -eq 0 ]; then
+  echo `getGvimServer`
+else
+  if [ "$1" = "." ]; then
+    GVIM_SERVER="__PWD"
+  elif [ "$1" = "-" ]; then
+    GVIM_SERVER="__DEFAULT"
+  else
+    GVIM_SERVER=$1
+  fi
+  
+  export GVIM_SERVER
+fi

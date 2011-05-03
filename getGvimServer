@@ -1,0 +1,11 @@
+#!/bin/sh
+
+DEFAULT="GVIM"
+
+if [ "$GVIM_SERVER" = "__DEFAULT" -o "$GVIM_SERVER" = "" ]; then
+  echo $DEFAULT
+elif [ "$GVIM_SERVER" = "__PWD" ]; then
+  echo $PWD
+else
+  echo $GVIM_SERVER
+fi

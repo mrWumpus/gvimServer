@@ -1,0 +1,20 @@
+#!/bin/sh
+
+while getopts "s:" flag; do
+  if [ "$flag" = "s" ]; then
+    SERVER=$OPTARG
+  fi
+done
+
+shift $(($OPTIND-1))
+
+if [ "$SERVER" = "" ]; then
+ SERVER=`getGvimServer`
+fi
+
+if [ $# -lt 1 ]; then
+  echo "Please specify file to edit"
+  exit 1
+fi
+
+gvim --servername $SERVER --remote-silent "$@"

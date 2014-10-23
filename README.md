@@ -3,6 +3,8 @@ gvimServer
 
 This project is a collection of simple scripts to take advantage of VIM's server capabilities.
 
+BTW, I completely don't use this any more as I do all my Vimming in a console now.
+
 Requirements
 ------------
 
@@ -28,5 +30,3 @@ See Also
 --------
 
 See the --servername, --remote-silent and --serverlist options to VIM.
-
-
